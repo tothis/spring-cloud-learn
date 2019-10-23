@@ -1,0 +1,16 @@
+# idea
+.idea/
+*.iml
+
+# compiled class
+*.class
+core/*/target/
+dms/*/target/
+portal/*/target/
+
+# log
+*.log
+
+# java
+*.jar
+*.war
