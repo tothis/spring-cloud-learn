@@ -4,9 +4,8 @@
 
 # compiled class
 *.class
-core/*/target/
-dms/*/target/
-portal/*/target/
+
+*/target/
 
 # log
 *.log
