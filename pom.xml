@@ -16,6 +16,10 @@
     <version>1.0</version>
     <description>cloud</description>
 
+    <modules>
+        <module>eureka-server</module>
+    </modules>
+
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>Hoxton.M3</spring-cloud.version>
