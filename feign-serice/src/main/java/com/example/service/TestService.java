@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @time 2019/10/23 14:39
  * @description
  */
-@FeignClient("service")
+@FeignClient("service") // 通过服务名调用指定服务
 public interface TestService {
 
-    @GetMapping("test")
+    @GetMapping
     String test();
 }

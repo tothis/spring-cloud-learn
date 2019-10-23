@@ -19,6 +19,6 @@ public class TestServiceImpl implements TestService {
 
     @Override
     public String test() {
-        return restTemplate.getForObject("http://CLIENT/", String.class);
+        return restTemplate.getForObject("http://SERVICE/", String.class);
     }
 }

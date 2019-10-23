@@ -10,11 +10,11 @@
         <version>2.2.0.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-
     <groupId>com.example</groupId>
     <artifactId>cloud</artifactId>
     <version>1.0</version>
-    <description>cloud</description>
+    <packaging>pom</packaging>
+    <description>this-cloud</description>
 
     <modules>
         <module>eureka-server</module>

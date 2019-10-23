@@ -12,6 +12,7 @@
     <artifactId>ribbon-service</artifactId>
     <version>1.0</version>
     <name>ribbon-service</name>
+    <packaging>jar</packaging>
     <description>this-ribbon-service</description>
 
     <properties>
@@ -48,6 +49,17 @@
         <!--</dependency>-->
     </dependencies>
 
+    <repositories>
+        <!-- maven中央仓库的版本甚至比阿里仓库还低 如下添加spring官方仓库 -->
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
     <build>
         <plugins>
             <plugin>

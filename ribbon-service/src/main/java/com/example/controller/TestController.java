@@ -19,7 +19,7 @@ public class TestController {
     private TestService testService;
 
     @ResponseBody
-    @GetMapping("test")
+    @GetMapping
     public String test() {
         return testService.test();
     }

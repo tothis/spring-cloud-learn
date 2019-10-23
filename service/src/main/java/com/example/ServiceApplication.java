@@ -1,5 +1,6 @@
 package com.example;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
@@ -16,9 +17,12 @@ public class ServiceApplication {
         SpringApplication.run(ServiceApplication.class, args);
     }
 
+    @Value("${server.port}")
+    private int port;
+
     @ResponseBody
     @GetMapping
     public String home() {
-        return "this is home";
+        return "port : " + port;
     }
 }

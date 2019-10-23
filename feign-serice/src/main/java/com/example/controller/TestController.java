@@ -11,13 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
  * @time 2019/10/23 14:39
  * @description
  */
+
 @RestController
 public class TestController {
 
     @Autowired
     private TestService testService;
 
-    @GetMapping("test")
+    @GetMapping
     public String test() {
         return testService.test();
     }
