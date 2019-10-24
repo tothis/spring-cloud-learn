@@ -36,16 +36,16 @@
         </dependency>
 
         <!-- hystric在5秒请求20次时 断路器会被打开 -->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.cloud</groupId>-->
-            <!--<artifactId>spring-cloud-starter-hystrix</artifactId>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        </dependency>
 
         <!-- @HystrixCommand注解是由名为javanica的Hystrix contrib库提供 javanica是一个Hystrix的子项目 用于简化Hystrix的使用 -->
         <!--<dependency>-->
             <!--<groupId>com.netflix.hystrix</groupId>-->
             <!--<artifactId>hystrix-javanica</artifactId>-->
-            <!--<version>RELEASE</version>-->
+            <!--<version>${hystrix-javanica.version}</version>-->
         <!--</dependency>-->
     </dependencies>
 

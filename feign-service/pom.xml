@@ -9,11 +9,11 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>feign-serice</artifactId>
+    <artifactId>feign-service</artifactId>
     <version>1.0</version>
-    <name>feign-serice</name>
+    <name>feign-service</name>
     <packaging>jar</packaging>
-    <description>this-feign-serice</description>
+    <description>this-feign-service</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -34,6 +34,11 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
+
+        <!--<dependency>-->
+        <!--<groupId>org.springframework.cloud</groupId>-->
+        <!--<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>-->
+        <!--</dependency>-->
     </dependencies>
 
     <repositories>
