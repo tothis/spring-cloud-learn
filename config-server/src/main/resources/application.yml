@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/tothis/spring-cloud-config/
+          searchPaths: repository
+          username:
+          password:
+      label: master
+server:
+  port: 8888

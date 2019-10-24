@@ -22,23 +22,26 @@
         <module>ribbon-service</module>
         <module>feign-service</module>
         <module>zuul-service</module>
+        <module>config-server</module>
+        <module>config-client</module>
     </modules>
 
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>Hoxton.M3</spring-cloud.version>
         <spring-boot.version>2.2.0.RELEASE</spring-boot.version>
-        <ribbon.version>1.4.7.RELEASE</ribbon.version>
         <netflix.version>2.1.3.RELEASE</netflix.version>
-        <hystrix-javanica.version>1.5.18</hystrix-javanica.version>
+        <config.version>2.1.4.RELEASE</config.version>
         <springloaded.version>1.2.8.RELEASE</springloaded.version>
         <dockerfile.version>1.4.10</dockerfile.version>
+        <lombok.version>1.18.10</lombok.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <version>${spring-boot.version}</version>
             <scope>test</scope>
             <exclusions>
                 <exclusion>
@@ -52,7 +55,15 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
+            <version>${spring-boot.version}</version>
             <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
@@ -75,7 +86,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-openfeign</artifactId>
-                <version>${openfeign.version}</version>
+                <version>${netflix.version}</version>
             </dependency>
 
             <dependency>
@@ -104,14 +115,20 @@
 
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-ribbon</artifactId>
-                <version>${ribbon.version}</version>
+                <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+                <version>${netflix.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-config-server</artifactId>
+                <version>${config.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
 
     <repositories>
-        <!-- maven中央仓库的版本甚至比阿里仓库还低 如下添加spring官方仓库 -->
+        <!-- maven中央仓库的版本甚至比阿里仓库还低 如下为添加spring官方仓库 -->
         <repository>
             <id>spring-milestones</id>
             <name>Spring Milestones</name>

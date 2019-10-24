@@ -9,11 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>service</artifactId>
+    <artifactId>config-server</artifactId>
     <version>1.0</version>
-    <name>service</name>
-    <packaging>jar</packaging>
-    <description>this-service</description>
+    <name>config-server</name>
+    <description>this-config-server</description>
 
     <dependencies>
         <dependency>
@@ -23,7 +22,7 @@
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
     </dependencies>
 
@@ -35,4 +34,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

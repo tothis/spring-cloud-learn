@@ -15,10 +15,6 @@
     <packaging>jar</packaging>
     <description>this-ribbon-service</description>
 
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -40,26 +36,8 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
         </dependency>
-
-        <!-- @HystrixCommand注解是由名为javanica的Hystrix contrib库提供 javanica是一个Hystrix的子项目 用于简化Hystrix的使用 -->
-        <!--<dependency>-->
-            <!--<groupId>com.netflix.hystrix</groupId>-->
-            <!--<artifactId>hystrix-javanica</artifactId>-->
-            <!--<version>${hystrix-javanica.version}</version>-->
-        <!--</dependency>-->
     </dependencies>
 
-    <repositories>
-        <!-- maven中央仓库的版本甚至比阿里仓库还低 如下添加spring官方仓库 -->
-        <repository>
-            <id>spring-milestones</id>
-            <name>Spring Milestones</name>
-            <url>https://repo.spring.io/milestone</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
     <build>
         <plugins>
             <plugin>
