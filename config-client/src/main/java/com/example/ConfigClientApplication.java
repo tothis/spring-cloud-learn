@@ -7,7 +7,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -24,7 +23,6 @@ public class ConfigClientApplication {
     /**
      * http://localhost:8881/actuator/bus-refresh
      */
-
     // a.properties a.yml 相同的键显示properties的值
     @Value("${test-version}")
     private String test;
@@ -32,8 +30,7 @@ public class ConfigClientApplication {
     @Value("${username}")
     private String username;
 
-    @ResponseBody
-    @GetMapping
+    @GetMapping("test")
     public String test() {
         return test + "\n" + username;
     }

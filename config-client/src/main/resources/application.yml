@@ -1,16 +1,24 @@
+server:
+  port: 8882
 spring:
+  application:
+    name: config-client
   rabbitmq:
-    host: localhost
+    host: 192.168.1.56
     port: 5672
-    username: root
-    password: 123456
+    username: guest
+    password: guest
   cloud:
-      bus:
+    bus:
+      enabled: true
+      trace:
         enabled: true
-        trace:
-          enabled: true
 management:
   endpoints:
     web:
       exposure:
         include: bus-refresh
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
