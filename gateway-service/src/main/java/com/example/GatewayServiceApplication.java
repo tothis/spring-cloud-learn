@@ -35,7 +35,7 @@ public class GatewayServiceApplication {
     }
 
     @ResponseBody
-    @GetMapping("/fallback")
+    @GetMapping("fallback")
     public Mono<String> fallback() {
         return Mono.just("fallback");
     }
