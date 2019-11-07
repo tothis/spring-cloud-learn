@@ -18,7 +18,6 @@ public class TestController {
     @Autowired
     private TestService testService;
 
-    @ResponseBody
     @GetMapping
     public String test() {
         return testService.test();
