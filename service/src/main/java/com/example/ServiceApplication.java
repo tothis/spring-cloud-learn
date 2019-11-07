@@ -41,7 +41,7 @@ public class ServiceApplication {
     @GetMapping("test1")
     public String test1() {
         log.info("calling trace service");
-        return restTemplate.getForObject("http://localhost:8989/miya", String.class);
+        return restTemplate.getForObject("http://localhost:8989/test", String.class);
     }
 
     @GetMapping("test2")

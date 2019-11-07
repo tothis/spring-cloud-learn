@@ -31,8 +31,14 @@ public class ZipkinServiceApplication {
 
     @GetMapping("test")
     public String test() {
+        log.info("test is being called");
+        return "zipkin-service-test";
+    }
+
+    @GetMapping("test1")
+    public String test1() {
         log.info(" is being called");
-        return restTemplate.getForObject("http://localhost:8989/miya", String.class);
+        return restTemplate.getForObject("http://localhost:8988", String.class);
     }
 
     @Bean

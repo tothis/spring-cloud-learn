@@ -31,6 +31,7 @@
         <java.version>1.8</java.version>
         <spring-cloud.version>Hoxton.M3</spring-cloud.version>
         <spring-boot.version>2.2.0.RELEASE</spring-boot.version>
+        <zipkin-starter.version>2.1.5.RELEASE</zipkin-starter.version>
         <netflix.version>2.1.3.RELEASE</netflix.version>
         <bus-amqp.version>2.1.3.RELEASE</bus-amqp.version>
         <config.version>2.1.4.RELEASE</config.version>
@@ -156,6 +157,12 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-actuator</artifactId>
                 <version>${spring-boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-zipkin</artifactId>
+                <version>${zipkin-starter.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
