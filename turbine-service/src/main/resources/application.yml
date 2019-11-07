@@ -1,0 +1,27 @@
+server:
+  port: 8764
+spring:
+  application:
+    name: turbine-service
+  zipkin:
+    base-url: http://localhost:8080
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+      cors:
+        allowed-origins: '*'
+        allowed-methods: '*'
+turbine:
+  app-config: service,service-two
+  aggregator:
+    clusterConfig: default
+  clusterNameExpression: new String('default')
+  combine-host: true
+  instanceUrlSuffix:
+    default: actuator/hystrix.stream
