@@ -34,8 +34,10 @@
         <zipkin-starter.version>2.1.5.RELEASE</zipkin-starter.version>
         <netflix.version>2.1.3.RELEASE</netflix.version>
         <openfeign-starter.version>2.1.3.RELEASE</openfeign-starter.version>
-        <bus-amqp.version>2.1.3.RELEASE</bus-amqp.version>
+        <gateway-starter.version>2.1.3.RELEASE</gateway-starter.version>
+        <bus-amqp-starter.version>2.1.3.RELEASE</bus-amqp-starter.version>
         <config.version>2.1.4.RELEASE</config.version>
+        <config-starter.version>2.1.4.RELEASE</config-starter.version>
         <springloaded.version>1.2.8.RELEASE</springloaded.version>
         <dockerfile.version>1.4.10</dockerfile.version>
         <lombok.version>1.18.10</lombok.version>
@@ -44,15 +46,15 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <version>${spring-boot.version}</version>
             <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.junit.vintage</groupId>
-                    <artifactId>junit-vintage-engine</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
 
         <!-- 热部署插件 -->
@@ -150,6 +152,12 @@
 
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-gateway</artifactId>
+                <version>${gateway-starter.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
                 <version>${netflix.version}</version>
             </dependency>
@@ -163,13 +171,13 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-config</artifactId>
-                <version>${config.version}</version>
+                <version>${config-starter.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-bus-amqp</artifactId>
-                <version>${bus-amqp.version}</version>
+                <version>${bus-amqp-starter.version}</version>
             </dependency>
 
             <dependency>
