@@ -2,12 +2,15 @@ package com.example;
 
 import com.example.filter.RequestTimeFilter;
 import com.example.filter.RequestTimeGatewayFilterFactory;
+import com.example.filter.TokenFilter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.gateway.filter.ratelimit.KeyResolver;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
 
@@ -50,10 +53,15 @@ public class GatewayServiceApplication {
                 .build();
     }
 
-//    @GetMapping("fallback")
-//    public Mono<String> fallback() {
-//        return Mono.just("fallback");
-//    }
+    @GetMapping("fallback")
+    public Mono<String> fallback() {
+        return Mono.just("fallback");
+    }
+
+    @Bean
+    public TokenFilter tokenFilter() {
+        return new TokenFilter();
+    }
 
     @Bean
     public RequestTimeGatewayFilterFactory elapsedGatewayFilterFactory() {
@@ -70,6 +78,7 @@ public class GatewayServiceApplication {
         return new UriKeyResolver();
     }
 
+    @Primary
     @Bean
     public KeyResolver userKeyResolver() {
         return exchange -> Mono.just(exchange.getRequest().getQueryParams().getFirst("user"));
