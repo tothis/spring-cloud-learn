@@ -18,11 +18,13 @@
 
     <modules>
         <module>eureka-server</module>
+        <module>turbine-service</module>
         <module>service</module>
         <module>service-two</module>
         <module>ribbon-service</module>
         <module>feign-service</module>
         <module>zuul-service</module>
+        <module>gateway-service</module>
         <module>config-server</module>
         <module>config-client</module>
     </modules>
