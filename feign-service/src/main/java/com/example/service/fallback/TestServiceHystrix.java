@@ -4,8 +4,8 @@ import com.example.service.TestService;
 import org.springframework.stereotype.Component;
 
 /**
- * @author admin
- * @version V1.0
+ * @author lilei
+ * @version 1.0
  * @time 2019/10/24 14:48
  * @description
  */

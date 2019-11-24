@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * @author admin
- * @version V1.0
+ * @author lilei
+ * @version 1.0
  * @time 2019/10/23 14:40
  * @description
  */

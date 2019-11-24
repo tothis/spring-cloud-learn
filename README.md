@@ -6,4 +6,13 @@
 
     个人spring-cloud学习记录 欢迎交流
 
+eureka-server
+zuul-service
+gateway-service
+config-server
+feign-service
+ribbon-service
+turbine-service
+zipkin-server
+
 >https://github.com/tothis/spring-cloud-learn/
