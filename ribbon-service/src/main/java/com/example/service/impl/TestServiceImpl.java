@@ -21,6 +21,7 @@ public class TestServiceImpl implements TestService {
     @HystrixCommand(fallbackMethod = "error")
     @Override
     public String test() {
+        // ribbon会根据服务名来选择具体服务 在请求时会用具体url替换掉服务名
         return restTemplate.getForObject("http://SERVICE/", String.class);
     }
 
