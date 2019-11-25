@@ -43,6 +43,7 @@
         <springloaded.version>1.2.8.RELEASE</springloaded.version>
         <dockerfile.version>1.4.10</dockerfile.version>
         <lombok.version>1.18.10</lombok.version>
+        <lcn.version>4.1.0</lcn.version>
     </properties>
 
     <dependencies>
@@ -79,6 +80,16 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-log4j2</artifactId>
             <version>${spring-boot.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.codingapi</groupId>
+            <artifactId>transaction-springcloud</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.codingapi</groupId>
+            <artifactId>tx-plugins-db</artifactId>
         </dependency>
     </dependencies>
 
@@ -198,6 +209,18 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-zipkin</artifactId>
                 <version>${zipkin-starter.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.codingapi</groupId>
+                <artifactId>transaction-springcloud</artifactId>
+                <version>${lcn.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.codingapi</groupId>
+                <artifactId>tx-plugins-db</artifactId>
+                <version>${lcn.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
