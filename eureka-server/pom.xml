@@ -15,6 +15,10 @@
     <packaging>jar</packaging>
     <description>this-eureka-server</description>
 
+    <properties>
+        <dockerfile.version>1.4.13</dockerfile.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -24,35 +28,23 @@
 
     <build>
         <plugins>
+            <!-- 无此插件 无法运行 且提示xx.jar中没有主清单属性 -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <dependencies>
-                    <!-- spring热部署 -->
-                    <dependency>
-                        <groupId>org.springframework</groupId>
-                        <artifactId>springloaded</artifactId>
-                        <version>${springloaded.version}</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <configuration>
-                    <skip>true</skip>
-                </configuration>
             </plugin>
             <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>dockerfile-maven-plugin</artifactId>
-                <version>${dockerfile.version}</version>
+                <version>1.4.13</version>
                 <executions>
                     <execution>
                         <id>default</id>
                         <!-- mvn package时让docker打包 -->
                         <goals>
+                            <!-- 构建镜像 -->
                             <goal>build</goal>
+                            <!-- 推动镜像 -->
                             <goal>push</goal>
                         </goals>
                     </execution>
@@ -60,9 +52,8 @@
                 <configuration>
                     <!-- docker仓库名 -->
                     <repository>${project.artifactId}</repository>
-                    <!-- docker镜像标签名 -->
+                    <!-- docker镜像标签名 默认为latest -->
                     <tag>${project.version}</tag>
-                    <contextDirectory>${project.basedir}/src/main/docker</contextDirectory>
                     <buildArgs>
                         <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
                     </buildArgs>

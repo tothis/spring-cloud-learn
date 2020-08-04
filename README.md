@@ -6,13 +6,14 @@
 
     个人spring-cloud学习记录 欢迎交流
 
-eureka 注册中心 显示应用的服务名称
-zuul 网关
-gateway 网关 将替代zuul
-config 配置中心
-ribbon restTemplate调用 具有负载均衡能力
-feign 使用注解方式开发 底层仍是restTemplate调用
-turbine hystrix-turbine 断路器聚合监控
-zipkin 链路追踪 查看服务之间调用线路
++ eureka 注册中心 显示应用的服务名称
++ zuul 网关
++ gateway 网关 将替代zuul
++ config 配置中心
++ ribbon restTemplate调用 具有负载均衡能力
++ feign 使用注解方式开发 底层仍是restTemplate调用
++ turbine hystrix-turbine 断路器聚合监控
++ [zipkin](https://zipkin.io/pages/quickstart) 链路追踪 查看服务之间调用线路
+  + docker启动 `docker run -d -p 9411:9411 openzipkin/zipkin`
 
 >https://github.com/tothis/spring-cloud-learn
