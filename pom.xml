@@ -136,7 +136,7 @@
         <openfeign.version>2.2.3.RELEASE</openfeign.version>
         <gateway.version>2.2.3.RELEASE</gateway.version>
         <bus-amqp.version>2.2.3.RELEASE</bus-amqp.version>
-        <config.version>2.2.3.RELEASE</config.version>
+        <config.version>2.2.4.RELEASE</config.version>
         <lombok.version>1.18.12</lombok.version>
     </properties>
 
