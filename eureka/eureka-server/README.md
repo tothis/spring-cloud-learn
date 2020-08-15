@@ -2,7 +2,7 @@ eureka-server
 ***
 运行
 ```shell
-docker run --name eureka-test -p 8081:8081 -d eureka-server:1.0
+docker run --name eureka-test -p 8001:8001 -d eureka-server:1.0
 ```
 删除
 ```shell

@@ -1,0 +1,14 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: ribbon-consumer
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.92.134:8001/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

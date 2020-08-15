@@ -1,0 +1,18 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: feign-consumer
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.92.134:8001/eureka
+# 开启hystrix断路器
+feign:
+  hystrix:
+    enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
