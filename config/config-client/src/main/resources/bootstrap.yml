@@ -1,0 +1,15 @@
+# bootstrap配置优先于application配置文件 配置不会被覆盖
+spring:
+  cloud:
+    config:
+      label: master
+      profile: dev
+      # 配置中心服务地址 使用eureka后此配置失效
+      # uri: http://localhost:8082
+      discovery:
+        enabled: true
+        serviceId: config-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.92.134:8081/eureka

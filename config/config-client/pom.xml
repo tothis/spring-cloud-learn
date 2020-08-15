@@ -4,15 +4,15 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.example</groupId>
-        <artifactId>cloud</artifactId>
+        <artifactId>config</artifactId>
         <version>1.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>config-server</artifactId>
+    <artifactId>config-client</artifactId>
     <version>1.0</version>
-    <name>config-server</name>
-    <description>this-config-server</description>
+    <name>config-client</name>
+    <description>this-config-client</description>
 
     <dependencies>
         <dependency>
@@ -22,12 +22,17 @@
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
+            <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
         </dependency>
     </dependencies>
 
@@ -39,5 +44,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

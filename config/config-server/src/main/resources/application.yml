@@ -1,0 +1,36 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: config-server
+  profiles:
+    # 使用本地文件时需写入native
+    active: native
+  rabbitmq:
+    host: 192.168.92.134
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    # https://docs.spring.io/spring-cloud-config/docs/2.2.4.RELEASE/reference/html
+    config:
+      label: master
+      server:
+        # git:
+        #   uri: https://github.com/tothis/spring-cloud-learn
+        #   search-paths: config/profile
+        native:
+          # search-locations: classpath:profile
+          search-locations: file:D:/IDEAProjects/project/spring-cloud-learn/config/profile
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.92.134:8081/eureka
+management:
+  endpoints:
+    web:
+      # 默认前缀为'/actuator'
+      # base-path: /
+      exposure:
+        # include: bus-refresh
+        include: '*'

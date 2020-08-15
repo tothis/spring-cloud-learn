@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.0.RELEASE</version>
+        <version>2.3.2.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
     <artifactId>cloud</artifactId>
     <version>1.0</version>
-    <packaging>pom</packaging>
     <description>this-cloud</description>
 
     <modules>
@@ -25,73 +24,8 @@
         <module>feign-service</module>
         <module>zuul-service</module>
         <module>gateway-service</module>
-        <module>config-server</module>
-        <module>config-client</module>
+        <module>config</module>
     </modules>
-
-    <properties>
-        <java.version>1.8</java.version>
-        <spring-cloud.version>Hoxton.M3</spring-cloud.version>
-        <spring-boot.version>2.2.0.RELEASE</spring-boot.version>
-        <zipkin-starter.version>2.1.5.RELEASE</zipkin-starter.version>
-        <netflix.version>2.1.3.RELEASE</netflix.version>
-        <openfeign-starter.version>2.1.3.RELEASE</openfeign-starter.version>
-        <gateway-starter.version>2.1.3.RELEASE</gateway-starter.version>
-        <bus-amqp-starter.version>2.1.3.RELEASE</bus-amqp-starter.version>
-        <config.version>2.1.4.RELEASE</config.version>
-        <config-starter.version>2.1.4.RELEASE</config-starter.version>
-        <springloaded.version>1.2.8.RELEASE</springloaded.version>
-        <dockerfile.version>1.4.10</dockerfile.version>
-        <lombok.version>1.18.10</lombok.version>
-        <lcn.version>4.1.0</lcn.version>
-    </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-            <version>${spring-boot.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <version>${spring-boot.version}</version>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- 热部署插件 -->
-        <!--        <dependency>-->
-        <!--            <groupId>org.springframework.boot</groupId>-->
-        <!--            <artifactId>spring-boot-devtools</artifactId>-->
-        <!--            <version>${spring-boot.version}</version>-->
-        <!--            <optional>true</optional>-->
-        <!--        </dependency>-->
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-            <scope>compile</scope>
-        </dependency>
-
-        <!-- 使用log4j2 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-log4j2</artifactId>
-            <version>${spring-boot.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.codingapi</groupId>
-            <artifactId>transaction-springcloud</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.codingapi</groupId>
-            <artifactId>tx-plugins-db</artifactId>
-        </dependency>
-    </dependencies>
 
     <dependencyManagement>
         <dependencies>
@@ -109,22 +43,10 @@
                 <version>${spring-boot.version}</version>
             </dependency>
 
-            <!-- 排除默认日志 exclusion排除其中所有依赖 等于没有依赖 -->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-logging</artifactId>
-                <exclusions>
-                    <exclusion>
-                        <groupId>*</groupId>
-                        <artifactId>*</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-openfeign</artifactId>
-                <version>${openfeign-starter.version}</version>
+                <version>${openfeign.version}</version>
             </dependency>
 
             <dependency>
@@ -166,7 +88,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-gateway</artifactId>
-                <version>${gateway-starter.version}</version>
+                <version>${gateway.version}</version>
             </dependency>
 
             <dependency>
@@ -186,17 +108,16 @@
                 <artifactId>spring-cloud-config-server</artifactId>
                 <version>${config.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-config</artifactId>
-                <version>${config-starter.version}</version>
+                <version>${config.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-bus-amqp</artifactId>
-                <version>${bus-amqp-starter.version}</version>
+                <version>${bus-amqp.version}</version>
             </dependency>
 
             <dependency>
@@ -204,36 +125,67 @@
                 <artifactId>spring-boot-starter-actuator</artifactId>
                 <version>${spring-boot.version}</version>
             </dependency>
-
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-zipkin</artifactId>
-                <version>${zipkin-starter.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.codingapi</groupId>
-                <artifactId>transaction-springcloud</artifactId>
-                <version>${lcn.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.codingapi</groupId>
-                <artifactId>tx-plugins-db</artifactId>
-                <version>${lcn.version}</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 
+    <properties>
+        <java.version>1.8</java.version>
+        <spring-boot.version>2.3.2.RELEASE</spring-boot.version>
+        <spring-cloud.version>Hoxton.SR6</spring-cloud.version>
+        <netflix.version>2.2.3.RELEASE</netflix.version>
+        <openfeign.version>2.2.3.RELEASE</openfeign.version>
+        <gateway.version>2.2.3.RELEASE</gateway.version>
+        <bus-amqp.version>2.2.3.RELEASE</bus-amqp.version>
+        <config.version>2.2.3.RELEASE</config.version>
+        <lombok.version>1.18.12</lombok.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>${spring-boot.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- 使用log4j2 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
+        <!-- 排除默认日志logging exclusion所有依赖 等于没有依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+            <version>${spring-boot.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
     <repositories>
-        <!-- maven中央仓库的版本甚至比阿里仓库还低 如下为添加spring官方仓库 -->
+        <!-- 添加spring官方仓库 -->
         <repository>
             <id>spring-milestones</id>
             <name>Spring Milestones</name>
-            <url>https://repo.spring.io/milestone</url>
+            <url>https://repo.spring.io/libs-milestone</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
         </repository>
     </repositories>
+
+    <packaging>pom</packaging>
 </project>

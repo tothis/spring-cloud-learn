@@ -10,28 +10,24 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RefreshScope
 @EnableEurekaClient
 @EnableDiscoveryClient
+@RefreshScope
 @SpringBootApplication
 public class ConfigClientApplication {
+
+    @Value("${version}")
+    private String test;
 
     public static void main(String[] args) {
         SpringApplication.run(ConfigClientApplication.class, args);
     }
 
     /**
-     * http://localhost:8881/actuator/bus-refresh
+     * a.properties a.yml 相同的键显示properties的值
      */
-    // a.properties a.yml 相同的键显示properties的值
-    @Value("${test-version}")
-    private String test;
-
-    @Value("${username}")
-    private String username;
-
-    @GetMapping("test")
+    @GetMapping
     public String test() {
-        return test + "\n" + username;
+        return test;
     }
 }

@@ -1,15 +1,3 @@
-# idea
-.idea/
+.idea
 *.iml
-
-# compiled class
-*.class
-
-*/target/
-
-# log
-*.log
-
-# java
-*.jar
-*.war
+**/target
