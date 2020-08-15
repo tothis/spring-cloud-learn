@@ -1,0 +1,14 @@
+server:
+  port: 8003
+spring:
+  application:
+    name: zuul
+zuul:
+  routes:
+    test:
+      path: /test/**
+      serviceId: feign-provider
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.92.134:8001/eureka
