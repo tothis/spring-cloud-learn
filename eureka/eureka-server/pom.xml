@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.example</groupId>
-        <artifactId>cloud</artifactId>
+        <artifactId>eureka</artifactId>
         <version>1.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
@@ -12,7 +12,6 @@
     <artifactId>eureka-server</artifactId>
     <version>1.0</version>
     <name>eureka-server</name>
-    <packaging>jar</packaging>
     <description>this-eureka-server</description>
 
     <properties>

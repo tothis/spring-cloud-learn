@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 8002
 spring:
   application:
     name: config-server
@@ -25,7 +25,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://192.168.92.134:8081/eureka
+      defaultZone: http://192.168.92.134:8001/eureka
 management:
   endpoints:
     web:

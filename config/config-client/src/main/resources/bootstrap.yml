@@ -5,11 +5,11 @@ spring:
       label: master
       profile: dev
       # 配置中心服务地址 使用eureka后此配置失效
-      # uri: http://localhost:8082
+      # uri: http://localhost:8002
       discovery:
         enabled: true
         serviceId: config-server
 eureka:
   client:
     service-url:
-      defaultZone: http://192.168.92.134:8081/eureka
+      defaultZone: http://192.168.92.134:8001/eureka

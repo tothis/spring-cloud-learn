@@ -8,4 +8,4 @@ ADD ${JAR_FILE} /app.jar
 # 启动容器时执行
 ENTRYPOINT ["java", "-jar", "/app.jar"]
 # 指定端口号
-EXPOSE 8080
+EXPOSE 8001
