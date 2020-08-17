@@ -13,6 +13,7 @@
   + eureka
 + 配置中心
   + config
+  + [apollo](apollo.md)
 + 服务调用
   + ribbon
   + feign
@@ -21,6 +22,6 @@
 + 聚合监控
   + turbine
 + 链路追踪
-  + [zipkin](./zipkin.md)
+  + [zipkin](zipkin.md)
 
 > https://github.com/tothis/spring-cloud-learn
