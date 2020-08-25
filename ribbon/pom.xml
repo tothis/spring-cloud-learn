@@ -15,8 +15,8 @@
     <description>this-ribbon</description>
 
     <modules>
-        <module>ribbon-provider</module>
         <module>ribbon-consumer</module>
+        <module>ribbon-provider</module>
     </modules>
 
     <packaging>pom</packaging>

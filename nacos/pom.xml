@@ -9,14 +9,13 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>feign</artifactId>
+    <artifactId>nacos</artifactId>
     <version>1.0</version>
-    <name>feign</name>
-    <description>this-feign</description>
+    <name>nacos</name>
+    <description>this-nacos</description>
 
     <modules>
-        <module>feign-consumer</module>
-        <module>feign-provider</module>
+        <module>nacos-client</module>
     </modules>
 
     <packaging>pom</packaging>

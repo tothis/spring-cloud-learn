@@ -14,13 +14,13 @@
 + 配置中心
   + config
   + [apollo](apollo.md)
++ 注册&配置中心
+  + [nacos](nacos/README.md)
 + 服务调用
   + ribbon
   + feign
 + 容错
   + hystrix
-+ 聚合监控
-  + turbine
 + 链路追踪
   + [zipkin](zipkin.md)
 

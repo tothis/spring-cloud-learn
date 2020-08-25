@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.159.128:8848
+        # 配置文件后缀
+        file-extension: yml
+      discovery:
+        server-addr: 192.168.159.128:8848

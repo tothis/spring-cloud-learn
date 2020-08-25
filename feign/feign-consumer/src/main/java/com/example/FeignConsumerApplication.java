@@ -2,10 +2,16 @@ package com.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.hystrix.EnableHystrix;
+import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
-@EnableHystrix
+/**
+ * 开启hystrix dashboard
+ */
+@EnableHystrixDashboard
+/**
+ * 开启feign远程调用
+ */
 @EnableFeignClients
 @SpringBootApplication
 public class FeignConsumerApplication {
