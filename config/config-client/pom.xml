@@ -6,7 +6,6 @@
         <groupId>com.example</groupId>
         <artifactId>config</artifactId>
         <version>1.0</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
     <artifactId>config-client</artifactId>

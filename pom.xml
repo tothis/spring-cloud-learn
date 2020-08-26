@@ -6,6 +6,7 @@
     <groupId>com.example</groupId>
     <artifactId>cloud</artifactId>
     <version>1.0</version>
+    <name>cloud</name>
     <description>this-cloud</description>
     <packaging>pom</packaging>
 
