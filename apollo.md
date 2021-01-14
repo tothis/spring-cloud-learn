@@ -1,4 +1,4 @@
-# apollo
+# Apollo
 ***
 服务端部署参考 https://github.com/ctripcorp/apollo/wiki/分布式部署指南
 ***

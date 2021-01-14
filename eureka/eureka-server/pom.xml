@@ -38,7 +38,7 @@
                 <executions>
                     <execution>
                         <id>default</id>
-                        <!-- mvn package时让docker打包 -->
+                        <!-- mvn package时让Docker打包 -->
                         <goals>
                             <!-- 构建镜像 -->
                             <goal>build</goal>
@@ -48,9 +48,9 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <!-- docker仓库名 -->
+                    <!-- Docker仓库名 -->
                     <repository>${project.artifactId}</repository>
-                    <!-- docker镜像标签名 默认为latest -->
+                    <!-- Docker镜像标签名 默认为latest -->
                     <tag>${project.version}</tag>
                     <buildArgs>
                         <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
