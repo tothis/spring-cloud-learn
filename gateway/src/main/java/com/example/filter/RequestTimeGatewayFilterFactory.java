@@ -11,7 +11,6 @@ import java.util.List;
 
 /**
  * @author lilei
- * @since 1.0
  */
 @Slf4j
 public class RequestTimeGatewayFilterFactory extends AbstractGatewayFilterFactory<RequestTimeGatewayFilterFactory.Config> {

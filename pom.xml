@@ -4,15 +4,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.example</groupId>
-    <artifactId>cloud</artifactId>
+    <artifactId>spring-cloud-record</artifactId>
     <version>1.0</version>
-    <name>cloud</name>
-    <description>this-cloud</description>
+    <name>spring-cloud-record</name>
+    <description>spring-cloud-record</description>
+
     <packaging>pom</packaging>
 
     <modules>
         <module>eureka</module>
         <module>nacos</module>
+        <module>seata</module>
         <module>ribbon</module>
         <module>feign</module>
         <module>zuul</module>
@@ -43,15 +45,23 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <!-- MySQL连接包 -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
     <properties>
-        <spring-boot.version>2.3.0.RELEASE</spring-boot.version>
+        <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
         <spring-cloud.version>Hoxton.SR4</spring-cloud.version>
-        <spring-cloud-alibaba.version>2.2.1.RELEASE</spring-cloud-alibaba.version>
+        <spring-cloud-alibaba.version>2.2.2.RELEASE</spring-cloud-alibaba.version>
 
         <lombok.version>1.18.12</lombok.version>
+        <mysql-connector.version>8.0.21</mysql-connector.version>
     </properties>
 
     <dependencies>
@@ -79,7 +89,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <!-- 使用log4j2 -->
+        <!-- 使用 Log4j 2 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-log4j2</artifactId>

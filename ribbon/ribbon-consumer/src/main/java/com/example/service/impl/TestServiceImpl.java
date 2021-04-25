@@ -8,7 +8,6 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * @author lilei
- * @since 1.0
  */
 @Service
 public class TestServiceImpl implements TestService {

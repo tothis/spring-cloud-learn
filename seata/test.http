@@ -1,0 +1,5 @@
+# 抛出异常
+GET http://localhost:9001/true
+
+### 正常运行
+GET http://localhost:9001/false

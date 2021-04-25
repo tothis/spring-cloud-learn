@@ -7,7 +7,6 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * @author lilei
- * @since 1.0
  */
 @Configuration
 public class RestTemplateConfig {

@@ -6,7 +6,6 @@ import reactor.core.publisher.Mono;
 
 /**
  * @author lilei
- * @since 1.0
  */
 public class HostAddrKeyResolver implements KeyResolver {
 

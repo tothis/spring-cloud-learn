@@ -6,12 +6,12 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
- * 开启hystrix dashboard
+ * @author 李磊
  */
+// 开启hystrix dashboard
 @EnableHystrixDashboard
-/**
- * 开启feign远程调用
- */
+// 开启Feign远程调用
+
 @EnableFeignClients
 @SpringBootApplication
 public class FeignConsumerApplication {

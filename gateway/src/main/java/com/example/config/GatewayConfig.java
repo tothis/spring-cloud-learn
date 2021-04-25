@@ -15,7 +15,6 @@ import reactor.core.publisher.Mono;
 
 /**
  * @author 李磊
- * @since 1.0
  */
 @Configuration
 public class GatewayConfig {

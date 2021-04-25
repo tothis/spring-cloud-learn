@@ -11,7 +11,6 @@ import reactor.core.publisher.Mono;
  * GatewayFilter
  *
  * @author lilei
- * @since 1.0
  */
 @Slf4j
 public class RequestTimeFilter implements GatewayFilter, Ordered {

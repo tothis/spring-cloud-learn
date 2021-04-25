@@ -7,7 +7,7 @@ spring:
     # 使用本地文件时需写入native
     active: native
   rabbitmq:
-    host: 192.168.159.128
+    host: 192.168.1.128
     port: 5672
     username: guest
     password: guest
@@ -25,7 +25,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://192.168.159.128:8001/eureka
+      defaultZone: http://192.168.1.128:8001/eureka
 management:
   endpoints:
     web:

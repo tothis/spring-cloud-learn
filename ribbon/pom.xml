@@ -4,19 +4,18 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.example</groupId>
-        <artifactId>cloud</artifactId>
+        <artifactId>spring-cloud-record</artifactId>
         <version>1.0</version>
     </parent>
-    <groupId>com.example</groupId>
     <artifactId>ribbon</artifactId>
     <version>1.0</version>
     <name>ribbon</name>
     <description>this-ribbon</description>
 
+    <packaging>pom</packaging>
+
     <modules>
         <module>ribbon-consumer</module>
         <module>ribbon-provider</module>
     </modules>
-
-    <packaging>pom</packaging>
 </project>

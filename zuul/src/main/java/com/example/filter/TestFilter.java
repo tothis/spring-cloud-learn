@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * @author lilei
- * @since 1.0
  */
 @Slf4j
 @Component

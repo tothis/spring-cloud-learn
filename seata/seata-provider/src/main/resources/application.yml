@@ -1,0 +1,37 @@
+# 端口
+server:
+  port: 9002
+spring:
+  application:
+    name: seata-provider
+  # 数据源配置
+  datasource:
+    url: jdbc:mysql://192.168.1.128:3306/test2?useUnicode=true&characterEncoding=utf-8&useSSL=true
+    username: root
+    password: 123456
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    # 设置创建表的引擎为InnoDB
+    database-platform: org.hibernate.dialect.MySQL57InnoDBDialect
+seata:
+  tx-service-group: my_test_tx_group
+  registry:
+    type: nacos
+    nacos:
+      application: seata-server
+      server-addr: 192.168.1.128:8848
+      username: nacos
+      password: nacos
+  config:
+    type: nacos
+    nacos:
+      server-addr: 192.168.1.128:8848
+      group: SEATA_GROUP
+      username: nacos
+      password: nacos
+  service:
+    vgroup-mapping:
+      my_test_tx_group: default

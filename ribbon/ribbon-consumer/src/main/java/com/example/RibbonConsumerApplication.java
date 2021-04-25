@@ -6,12 +6,12 @@ import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 
 /**
- * 开启hystrix dashboard
+ * @author 李磊
  */
+// 开启hystrix dashboard
 @EnableHystrixDashboard
-/**
- * 开启hystrix熔断
- */
+// 开启hystrix熔断
+
 @EnableHystrix
 @SpringBootApplication
 public class RibbonConsumerApplication {

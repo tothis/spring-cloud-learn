@@ -8,8 +8,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 当前controller支持热刷新配置中心配置
+ * @author 李磊
  */
+// 当前Controller支持热刷新配置中心配置
+
 @RefreshScope
 @RestController
 @SpringBootApplication

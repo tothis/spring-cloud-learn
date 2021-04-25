@@ -10,7 +10,6 @@ import reactor.core.publisher.Mono;
 
 /**
  * @author lilei
- * @since 1.0
  */
 @Slf4j
 public class TokenFilter implements GlobalFilter, Ordered {
